@@ -5,6 +5,37 @@
 
 ---
 
+## Quick Start
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/yashwanth-baskaran/enterprise-ai-agent.git
+cd enterprise-ai-agent
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Set up your credentials
+cp .env.example .env
+# Open .env and fill in your business system details
+
+# 4. Test your connection
+python tools/connect.py
+```
+
+**Using with Claude:**
+- Go to [claude.ai](https://claude.ai) → Create a Project
+- Upload `CLAUDE.md` as the project instruction
+- Start giving instructions in plain English:
+
+> *"Show me all open opportunities created this month"*  
+> *"Which salesperson has the most deals stuck in the first stage?"*  
+> *"Build a report showing email performance by send time"*
+
+The agent reads the workflow, calls the right tool, and delivers the result.
+
+---
+
 ## The problem this solves
 
 Most attempts at AI-powered business automation fail the same way: they let the AI handle both the *reasoning* and the *execution*. When each step is 90% accurate, five steps gives you 59% success. That's not automation — that's gambling.
